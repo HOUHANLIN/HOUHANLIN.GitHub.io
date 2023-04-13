@@ -5,6 +5,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+	<script>
+		function drawLoser() {
+			var nameList = document.getElementById("nameList");
+			var names = nameList.getElementsByTagName("li");
+			var index = Math.floor(Math.random() * names.length);
+			var loser = names[index].textContent;
+			document.getElementById("loser").innerHTML = "请选择你的英雄：" + loser;
+		}
+</script>
 	<h1>抽签</h1>
 	<p>待抽学生名单：</p>
 	<ul id="nameList">
@@ -67,14 +76,6 @@
 	</ul>
 	<button onclick="drawLoser()">抽签</button>
 	<p id="loser"></p>
-	<script>
-		function drawLoser() {
-			var nameList = document.getElementById("nameList");
-			var names = nameList.getElementsByTagName("li");
-			var index = Math.floor(Math.random() * names.length);
-			var loser = names[index].textContent;
-			document.getElementById("loser").innerHTML = "请选择你的英雄：" + loser;
-		}
-	</script>
+	
 </body>
 </html>
