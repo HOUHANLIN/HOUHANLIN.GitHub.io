@@ -1,0 +1,80 @@
+<html>
+<head>
+	<title>抽签</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<h1>抽签</h1>
+	<p>待抽学生名单：</p>
+	<ul id="nameList">
+		<li>蔡雅欣</li>
+		<li>陈伊俊</li>
+		<li>程佳浩</li>
+		<li>仇志贤</li>
+		<li>邓卿</li>
+		<li>丁刘琛</li>
+		<li>董妍妍</li>
+		<li>范鹏程</li>
+		<li>范赛男</li>
+		<li>高旖雯</li>
+		<li>郭继勤</li>
+		<li>侯瀚林</li>
+		<li>黄孟祥</li>
+		<li>江少楠</li>
+		<li>姜保磊</li>
+		<li>李安琪</li>
+		<li>李柏宇</li>
+		<li>李东泽</li>
+		<li>李嘉丽</li>
+		<li>李诗怡</li>
+		<li>陆勇</li>
+		<li>马悦悦</li>
+		<li>潘雨欣</li>
+		<li>齐文涵</li>
+		<li>汝浩洋</li>
+		<li>沈宇全</li>
+		<li>盛佳悦</li>
+		<li>王驰</li>
+		<li>王雪涵</li>
+		<li>王子祥</li>
+		<li>吴姝怡</li>
+		<li>武国妹</li>
+		<li>肖佳丽</li>
+		<li>宣韶涵</li>
+		<li>闫婉晴</li>
+		<li>张慧</li>
+		<li>张可扬</li>
+		<li>张坤坤</li>
+		<li>张梦磊</li>
+		<li>张倩</li>
+		<li>张雪宝</li>
+		<li>张溢文</li>
+		<li>张雨</li>
+		<li>张志成</li>
+		<li>赵志远</li>
+		<li>周聪聪</li>
+		<li>王世杰</li>
+		<li>张瑞奇</li>
+		<li>赵宇翔</li>
+		<li>刘浩然</li>
+		<li>汝锦远</li>
+		<li>苏博涵</li>
+		<li>史雅婕</li>
+		<li>王柏程</li>
+		<li>王元昊</li>
+		<li>张子龙</li>
+	</ul>
+	<button onclick="drawLoser()">抽签</button>
+	<p id="loser"></p>
+	<script>
+		function drawLoser() {
+			var nameList = document.getElementById("nameList");
+			var names = nameList.getElementsByTagName("li");
+			var index = Math.floor(Math.random() * names.length);
+			var loser = names[index].textContent;
+			document.getElementById("loser").innerHTML = "请选择你的英雄：" + loser;
+		}
+	</script>
+</body>
+</html>
