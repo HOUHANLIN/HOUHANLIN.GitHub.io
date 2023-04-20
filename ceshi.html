@@ -1,8 +1,8 @@
-<p>距离2023年元旦还剩：<span id="countdown"></span></p>
+<p>距离2023年高考还有：<span id="countdown"></span></p>
 
 <script>
-// 获取目标日期（这里以2023年1月1日为例）
-const targetDate = new Date('2023-01-01T00:00:00+08:00');
+// 获取目标日期（这里以2023年6月7日为例）
+const targetDate = new Date('2023-06-07T09:00:00+08:00');
 
 // 更新倒计时显示函数
 function updateTime() {
@@ -17,13 +17,14 @@ function updateTime() {
     document.getElementById('countdown').textContent =
       `${days}天 ${hours}小时 ${minutes}分钟 ${seconds}秒`;
   } else {
-    document.getElementById('countdown').textContent = '已经过了元旦';
+    document.getElementById('countdown').textContent = '已经开考了';
   }
 }
 
 // 每秒钟更新一次倒计时
 setInterval(updateTime, 1000);
 </script>
+
 <a href="https://time.is/China" id="time_is_link" rel="nofollow" style="font-size:36px">中国时间:</a>
 <span id="China_z43d" style="font-size:36px"></span>
 <script src="//widget.time.is/zh.js"></script>
