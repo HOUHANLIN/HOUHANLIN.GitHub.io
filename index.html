@@ -41,46 +41,8 @@
 </head>
 <body>
 	
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>高考倒计时器</title>
-    <style>
-      body {
-      }
-      #countdown {
-        font-size: 40px;
-        color: #000000;;
-        padding: 10px;
-        border-radius: 10px;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="countdown"></div>
-    <script>
-      var examDate = new Date("2023-06-07T09:00:00Z");
-      var countdownDiv = document.getElementById("countdown");
 
-      function updateCountdown() {
-        var now = new Date();
-        var timeRemaining = Math.max(0, examDate.getTime() - now.getTime());
-        var daysRemaining = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-        var hoursRemaining = Math.floor((timeRemaining / (1000 * 60 * 60)) % 24);
-        var minutesRemaining = Math.floor((timeRemaining / (1000 * 60)) % 60);
-        var secondsRemaining = Math.floor((timeRemaining / 1000) % 60);
 
-        countdownDiv.innerHTML =
-          "距离2023年高考还有：" +
-          daysRemaining +
-          "天 " 
-      }
-
-      setInterval(updateCountdown, 1000);
-      updateCountdown();
-    </script>
-  </body>
-</html>
 	
 	<h1>抽签</h1>
 	<button id="drawButton">抽签</button>
@@ -92,7 +54,6 @@
 "蔡雅欣",
 "陈伊俊",
 "程佳浩",
-"程 佳浩",
 "仇志贤",
 "邓卿",
 "丁刘琛",
