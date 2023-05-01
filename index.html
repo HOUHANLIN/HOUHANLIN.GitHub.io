@@ -7,7 +7,7 @@
             body {
                 margin: 0;
                 padding: 0;
-                background-color: transparent; /* 将背景改为透明 */
+                background-color: transparent;
             }
             .container {
                 display: flex;
@@ -25,24 +25,54 @@
                 justify-content: space-between;
                 width: 80%;
             }
-            .option {
+            .option { /* 将四个选项按钮的大小和颜色都保持不变 */
                 width: 23%;
                 text-align: center;
-                background-color: green; /* 将按钮颜色改为绿色 */
+                background-color: #87CEEB;
                 padding: 1rem 0;
                 border-radius: 0.5rem;
             }
-            .option:hover {
+            .option:hover { /* 取消悬停时按钮的半透明效果 */
                 cursor: pointer;
-                opacity: 0.8; /* 当鼠标悬停在按钮上时，将按钮的透明度调整为0.8 */
+            }
+            .main-option { /* 将主按钮变成一个大一些的方形按钮 */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 50%;
+                height: 150px;
+                background-color: #87CEEB;
+                border-radius: 0.5rem;
+                margin-bottom: 2rem;
+            }
+            .main-option:hover { /* 给主按钮添加悬停时的动画效果 */
+                cursor: pointer;
+                animation-name: main-option-hover;
+                animation-duration: 0.5s;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: infinite;
+            }
+            @keyframes main-option-hover { /* 定义主按钮悬停时的动画效果 */
+                0% {
+                    transform: translateY(0);
+                }
+                50% {
+                    transform: translateY(-10px);
+                }
+                100% {
+                    transform: translateY(0);
+                }
             }
         </style>
     </head>
     <body>
         <div class="container">
             <h1>抽签</h1>
+            <div>
+                <div class="main-option" onclick="window.open('https://www.google.com/')"></div> <!-- 给主按钮添加链接 -->
+            </div>
             <div class="options">
-                <div class="option" onclick="window.open('https://www.google.com/')">选项1</div> <!-- 在新窗口中打开链接 -->
+                <div class="option" onclick="window.open('https://www.google.com/')">选项1</div>
                 <div class="option" onclick="window.open('https://www.google.com/')">选项2</div>
                 <div class="option" onclick="window.open('https://www.google.com/')">选项3</div>
                 <div class="option" onclick="window.open('https://www.google.com/')">选项4</div>
