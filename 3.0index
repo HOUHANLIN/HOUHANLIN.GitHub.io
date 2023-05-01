@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>抽签</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+h1 {
+margin-top: 50px;
+text-align: center;
+font-size: 36px;
+color: #333;
+}
+button {
+display: block;
+margin: 0 auto;
+padding: 10px 20px;
+font-size: 24px;
+color: #fff;
+background-color: #4CAF50;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+#loser {
+margin-top: 50px;
+text-align: center;
+font-size: 28px;
+color: #333;
+}
+#nameList {
+margin-top: 50px;
+list-style: none;
+padding: 0;
+text-align: center;
+}
+#nameList li {
+font-size: 24px;
+margin-bottom: 10px;
+}
+</style>
+</head>
+<body>
+<h1>抽签</h1>
+<button id="drawButton">抽签</button>
+<h1 id="loser"></h1>
+<ul id="nameList"></ul>
+<script>
+var nameList = [
+"蔡雅欣",
+"陈伊俊",
+"程佳浩",
+"仇志贤",
+"邓卿",
+"丁刘琛",
+];
+// Array to keep track of the drawn names
+var drawnNames = [];
+var drawButton = document.getElementById("drawButton");
+var loserElem = document.getElementById("loser");
+var nameListElem = document.getElementById("nameList");
+drawButton.addEventListener("click", function() {
+if (drawnNames.length === nameList.length) {
+alert("所有英雄已阵亡！");
+return;
+}
+var index;
+var loser;
+do {
+index = Math.floor(Math.random() * nameList.length);
+loser = nameList[index];
+} while (drawnNames.includes(loser));
+drawnNames.push(loser);
+nameListElem.innerHTML += "<li>" + loser + "</li>";
+loserElem.textContent = "请：" + loser + " 同学起来答题";
+});
+</script>
+</body>
+</html>
