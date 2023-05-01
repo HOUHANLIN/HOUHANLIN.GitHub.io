@@ -26,72 +26,25 @@ text-align: center;
 font-size: 24px;
 margin-bottom: 10px;
 }
+#greeting {
+text-align: center;
+}
 </style>
 </head>
-<body onclick="drawName()" onkeypress="drawName()">
+<body onclick="hideGreeting(); drawName()" onkeypress="drawName()">
 <h1>抽签</h1>
 <h1 id="loser"></h1>
 <ul id="nameList"></ul>
+<h2 id="greeting">点击屏幕任意处开始抽签</h2>
 <script>
 var nameList = [
 "蔡雅欣",
-"陈伊俊",
-"程佳浩",
-"仇志贤",
-"邓卿",
-"丁刘琛",
-"董妍妍",
-"范鹏程",
-"范赛男",
-"高旖雯",
-"郭继勤",
-"侯瀚林",
-"黄孟祥",
-"江少楠",
-"姜保磊",
-"李安琪",
-"李柏宇",
-"李东泽",
-"李嘉丽",
-"李诗怡",
-"陆勇",
-"马悦悦",
-"潘雨欣",
-"齐文涵",
-"汝浩洋",
-"沈宇全",
-"盛佳悦",
-"王驰",
-"王雪涵",
-"王子祥",
-"吴姝怡",
-"武国妹",
-"肖佳丽",
-"宣韶涵",
-"闫婉晴",
-"张慧",
-"张可扬",
-"张坤坤",
-"张梦磊",
-"张倩",
-"张雪宝",
-"张溢文",
-"张雨",
-"张志成",
-"赵志远",
-"周聪聪",
-"王世杰",
-"张瑞奇",
-"赵宇翔",
-"刘浩然",
-"汝锦远",
 "苏博涵",
 "史雅婕",
 "王柏程",
 "王元昊",
 "张子龙"
 ];
-// Array to keep track of the drawn names
 var drawnNames = [];
 var loserElem = document.getElementById("loser");
 var nameListElem = document.getElementById("nameList");
@@ -110,6 +63,11 @@ loser = nameList[index];
 drawnNames.push(loser);
 nameListElem.innerHTML += "<li>" + loser + "</li>";
 loserElem.textContent = "请：" + loser + " 同学起来答题";
+}
+
+function hideGreeting() {
+var greetingElem = document.getElementById("greeting");
+greetingElem.style.display = "none";
 }
 </script>
 </body>
