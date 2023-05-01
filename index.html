@@ -35,14 +35,10 @@
             .option:hover { /* 取消悬停时按钮的半透明效果 */
                 cursor: pointer;
             }
-            .main-option { /* 将主按钮变成一个大一些的方形按钮 */
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 50%;
-                height: 150px;
-                background-color: #87CEEB;
-                border-radius: 0.5rem;
+            .main-option { /* 将主按钮变成一个简洁的方形按钮，颜色改为淡绿色 */
+                width: 10%;
+                height: 50px;
+                background-color: #90EE90;
                 margin-bottom: 2rem;
             }
             .main-option:hover { /* 给主按钮添加悬停时的动画效果 */
@@ -69,7 +65,7 @@
         <div class="container">
             <h1>抽签</h1>
             <div>
-                <div class="main-option" onclick="window.open('https://www.google.com/')"></div> <!-- 给主按钮添加链接 -->
+                <div class="main-option"></div> <!-- 给主按钮添加链接 -->
             </div>
             <div class="options">
                 <div class="option" onclick="window.open('https://www.google.com/')">选项1</div>
